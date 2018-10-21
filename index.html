@@ -43,6 +43,28 @@
 
 
 <body>
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{308528269737620}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{v3.1}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
  <nav id="nav" class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -165,20 +187,7 @@
 
 <section>    
 
-  <script src="http://connect.facebook.net/en_US/all.js"></script>
-  
- <fb:login-button autologoutlink="true" onlogin="OnRequestPermission();">
-</fb:login-button>
-
-<script language="javascript" type="text/javascript">
-    FB.init({
-        appId: '308528269737620',
-        status: true, 
-        cookie: true, 
-        xfbml: true
-    });    
-</script>
-  
+ 
   
  </body>
 </html>
