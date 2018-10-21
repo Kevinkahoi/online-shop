@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> BEST EVER Collection </title>
+<title> Best Ever Collection</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="pagecss/index." >
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <script>
-  
-</script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css">
-
+ 
+ 
+   
 <style>
+ .navbar {
+  min-height: 80px;
+}
 
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
 </style>
 
 
@@ -26,205 +43,40 @@
 
 
 <body>
- <nav class="navbar navbar-inverse ">
+ <nav id="nav" class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">BEST EVER </a>
+      <h1>  </b><a id="logo" class="navbar-brand" href="#">BEST EVER Collection</a></h1>
+      </a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Designs</a></li>
-      <li><a href="#"></a>Categories</li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#"> Log-in</a></li>
+         <li><a href="#">Sign-in </a></li>
       
     </ul>
-
-   
-   
- <!-- sign up  Modal -->
-
-<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-              <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Sign in</h4>
-        </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label data-error="wrong" data-success="right" for="orangeForm-name">Your Email</label> 
-                    <input type="email"   id="mail" class="form-control validate">
-                   
-                </div>
-                <div class="form-group">
-                    <label data-error="incorrect" data-success="correct" for="orangeForm-email">Your First name</label> <br>
-                    <input type="text"    id="Fname" class="form-control validate">
-               
-                </div>
-                
-                 <div class="form-group">
-                  <label data-error="incorrect" data-success="correct" for="orangeForm-email">Your Last Name</label>  
-                    <input type="text"      id="Lname" class="form-control validate">   <div id="ErrorM"> </div>
-                    
-                </div>
-           
-
-                <div class="form-group">
-                 <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
-                   <input type="password"    id="pword" class="form-control validate">
-                   
-                </div>
-                <div class="form-group">
-                <label data-error="wrong" data-success="right" for="orangeForm-pass">Confirm  password</label>
-                    <input type="password" id="cpword" class="form-control validate">
-                    
-                </div>
-                <button type="submit"  id="RegU"    class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Send</button>
-
-            </div>
-       <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-           
-        </div>
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-
-      <li><a data-toggle="modal"  data-target="#myModal" >         <span  class="glyphicon glyphicon-user"> Login  </span> </a></li>
-      
-       <!-- Modal  for log in -->
-  <div class="modal fade" id="myModal" role="dialog">
   
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user " id=""    >  </span>Username </label>
-              <input type="text" class="form-control"  id="usrname" placeholder="Enter email">    
-            </div>
-            <div class="form-group">
-              <label data-error="" for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control"  id="psw" placeholder="Enter password"> <div id="errorMSG"></div>
-            </div>
-            
-            <div class="form-group mb-1">
-										<i class="prefix"></i>
-										<input class="form-check-input" id="RembD" name="RembD" type="checkbox">
-										<label for="RembD" class="form-check-label">Remember Me</label>
-									</div>
-            
-          
-           
-       <div class="checkbox">
-										<label for="RembMe" class="form-check-label"> <input class="form-check-input" id="RembMe" name="RembMe" type="checkbox">
-										Stay loged in</label>
-									</div>    
-           
-           
-           
-           
-           
-           
-           
-           
-            
-              <button type="submit" id="send" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
-          <p data-toggle="modal" data-target="#mModal">Forgot <a href="#">Password?</a></p>
-          
-           </div>
-      </div>
-      
-    </div>
-  </div> 
-</div>
+   
+   
  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
 </nav> 
 
 
-
-<div class="thumbnail">
-        <div id="DemoCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-                <li data-target="#DemoCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#DemoCarousel" data-slide-to="1"></li>
-                <li data-target="#DemoCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <h2>CUSTOMISED MUGS</h2>
-                    <div class="carousel-caption">
-                        <h3>Get any Design you want</h3>
-                        <p>Bid on any product you want</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <h2>CUSTOMISED LAPTOP</h2>
-                    <div class="carousel-caption">
-                        <h3>laptop services</h3>
-                        <p>Customised your laptop at cheaper price</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <h2>SERVICES AND PRODUCTS</h2>
-                    <div class="carousel-caption">
-                        <h3>Get any design on your product and services</h3>
-                        <p>Jeans and khakis will be coming soon</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control left" href="#DemoCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="carousel-control right" href="#DemoCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-    </div>
-
-<br>
+</div>
 
 <div class="container"> 
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="images/lap10.jpg" target="_blank">
-          <img src="images/lap10.jpg" alt="service" style="width:100%"></a>
+        <a href="images/t22.jpg" target="_blank"> <img src="images/t22.jpg" alt="service" style="width:100%"></a>
           <div class="caption">
             <b> <h5>Customised Jumper</h5> </b> 
         <p><b> Updates:</b> <span class="w3-badge w3-red">New!</span></p>
-        <p> Auction price: 50denari </p>
-       <button type="button" class="btn btn-success">BID</button>
+        <p>price: 500ksh </p>
+       <button type="button" class="btn btn-success">0</button>
           </div>
 
       </div>
@@ -236,23 +88,24 @@
           <div class="caption">
             <b> <h5>Customised Jumper</h5> </b> 
         <p><b> Updates:</b> <span class="w3-badge w3-red">New!</span></p>
-        <p> Auction price: 50denari </p>
-        <button type="button" class="btn btn-success">BID</button>
+        <p> Auction price: 50ksh </p>
+        <button type="button" class="btn btn-success">BUY</button>
           </div>
         
       </div>
     </div>
     <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="images/lap.jpg" target="_blank">
-          <img class="animated bounce infinite" src="images/lap.jpg" style="width:100%">
-           </a>
+       <div class="thumbnail">
+        <a href="images/lap2.jpg" target="_blank">
+          <img src="images/lap2.jpg" alt="service" style="width:100%"></a>
           <div class="caption">
-          <b> <h5>Customised Jumper</h5> </b> 
+            <b> <h5>Customised Jumper</h5> </b> 
         <p><b> Updates:</b> <span class="w3-badge w3-red">New!</span></p>
-        <p> Auction price: 50denari </p>
-        <button type="button" class="btn btn-primary btn-md">BID</button>
+        <p> Auction price: 50ksh </p>
+        <button type="button" class="btn btn-success">BUY</button>
           </div>
+        
+      </div>
        
       </div>
     </div>
@@ -261,97 +114,71 @@
 
 </div>
 
+
+
+<div class="container"> 
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/khaki1.jpg" target="_blank">
+          <img src="images/khaki1.jpg" alt="service" style="width:100%"></a>
+          <div class="caption">
+            <b> <h5>Customised Jumper</h5> </b> 
+        <p><b> Updates:</b> <span class="w3-badge w3-red">New!</span></p>
+        <p>price: 500ksh </p>
+       <button type="button" class="btn btn-success">0</button>
+          </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/t11.jpg" target="_blank">
+          <img src="images/t11.jpg" alt="service" style="width:100%"></a>
+          <div class="caption">
+            <b> <h5>Customised Jumper</h5> </b> 
+        <p> Auction price: 50ksh </p>
+        <button type="button" class="btn btn-success">BUY</button>
+          </div>
+        
+      </div>
+    </div>
+    <div class="col-md-4">
+       <div class="thumbnail">
+        <a href="images/lap2.jpg" target="_blank">
+          <img src="images/jeans1.jpg" alt="service" style="width:100%"></a>
+          <div class="caption">
+            <b> <h5>Customised Jumper</h5> </b> 
+        <p><b> Updates:</b> <span class="w3-badge w3-green">On sale</span></p>
+        <p> Auction price: 50ksh </p>
+        <button type="button" class="btn btn-success">BUY</button>
+          </div>
+        
+      </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <section>    
 
-<div class="lead">  
- <h2> Amazing Deals Online!</h2>
- <h1> Create account to BID </h1>
- </div>
-<div id="everything" ></div>
- <br><br>
+  <script src="http://connect.facebook.net/en_US/all.js"></script>
+  
+ <fb:login-button autologoutlink="true" onlogin="OnRequestPermission();">
+</fb:login-button>
 
- </section>
- 
- 
- 
- 
-
-  
- 
-      
-  
+<script language="javascript" type="text/javascript">
+    FB.init({
+        appId: '308528269737620',
+        status: true, 
+        cookie: true, 
+        xfbml: true
+    });    
+</script>
   
   
-  <
-       <!-- Modal  for forgot  -->
-  <div class="modal fade" id="mModal" role="dialog">
-  
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-           <button type="button" class="close" data-dismiss="modal"></button>
-
-        <h4>Enter your email </h4> 
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
-            <div class="form-group">
-                            <label data-error="wrong" data-success="right" for="orangeForm-name">Your Email</label> 
-                            <input type="email" id="maEil" class="form-control validate">
-                           <div id="errorMSG" ></div>
-                        </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-         <button type="submit"  id="forgetP"    class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Submit</button>
-<div id="successMSG"    ></div>
-<div id="errorMSG"    ></div>
-          
-           </div>
-      </div>
-      
-    </div>
-  </div> 
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-     
-<!-- Footer -->
-<div class="footer">       
-
-<h6> Join us :pennyInc </h6>  
-<a href="#"> Denari Alcohol</a>
-<a href="#"> Denari Creators</a>
-<a href=""> Denari  Gadget </a>
-
-<b>Terms and Conditions All Rights Reserved Privacy Policy</b>
-
-Contact Us 
-
-  <div class="copyright"> 
-        © 2018 Copyright:
-       <a href=""> www.pennyinc.co.ke</a>
-    </div>
-    <!-- Copyright -->
-
-  </div>
-  <!-- Footer -->
-  
- 
-<script src="pagejs/formerAnoJs.js"></script>
  </body>
 </html>
