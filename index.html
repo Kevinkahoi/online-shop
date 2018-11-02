@@ -64,6 +64,12 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+  
+  
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+  
 </script>
  <nav id="nav" class="navbar navbar-inverse ">
   <div class="container-fluid">
